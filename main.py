@@ -5,13 +5,17 @@ import os
 app = Flask(__name__)
 
 # Load the ML model and the pre-processing transformer from the 'models' directory
-model = joblib.load('models/polynomial_regression_meal_model.joblib')
-poly_transformer = joblib.load('models/poly_transformer.joblib')
+model_bulk = joblib.load('models/bulking_polynomial_regression_meal_model.joblib')
+model_cut = joblib.load('models/cutting_polynomial_regression_meal_model.joblib')
+bulking_poly_transformer = joblib.load('models/bulking_poly_transformer.joblib')
+cutting_poly_transformer = joblib.load('models/cutting_poly_transformer.joblib')
+
 
 @app.route('/')
 def index():
     # Render the main page of the web app
     return render_template('index.html')
+
 
 @app.route('/calculate_score', methods=['POST'])
 def calculate_score():
@@ -36,6 +40,11 @@ def calculate_score():
         # Handle any type conversion errors or negative values
         return jsonify({'error': 'Invalid input'}), 400
 
+    # Determine which model to use based on the toggle switch
+    is_bulk = data.get('isBulk', False)
+    model = model_bulk if is_bulk else model_cut
+    poly_transformer = bulking_poly_transformer if is_bulk else cutting_poly_transformer
+
     # Prepare the input features for the ML model
     features = [cost, protein, calories]
 
@@ -55,15 +64,18 @@ def calculate_score():
         return jsonify({'score': 0.00})
     return jsonify({'score': rounded_score})
 
+
 @app.errorhandler(500)
 def internal_error(error):
     # Custom error handler for internal server errors
     return jsonify({'error': 'Internal Server Error'}), 500
 
+
 @app.errorhandler(404)
 def not_found_error(error):
     # Custom error handler for "not found" errors
     return jsonify({'error': 'Resource Not Found'}), 404
+
 
 if __name__ == '__main__':
     # Start the Flask app on the specified port

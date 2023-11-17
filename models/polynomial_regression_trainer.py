@@ -6,7 +6,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 import joblib
 
 # Load the dataset
-df = pd.read_csv('./meal_scoring_dataset.csv')  # Path to your dataset file
+df = pd.read_csv('./bulking_meal_scoring_dataset.csv')  # Path to your dataset file
 
 # Define the features and the target
 X = df[['cost', 'protein', 'calories']]
@@ -35,5 +35,5 @@ print(f'Mean Squared Error: {mse}')
 print(f'R² Score: {r2}')
 
 # Save the model and the transformer
-joblib.dump(model, 'polynomial_regression_meal_model.joblib')
-joblib.dump(poly, 'poly_transformer.joblib')
+joblib.dump(model, 'bulking_polynomial_regression_meal_model.joblib')
+joblib.dump(poly, 'bulking_poly_transformer.joblib')
