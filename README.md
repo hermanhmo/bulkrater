@@ -1,5 +1,5 @@
 # Bulking Meal Rater
-Machine learning web app to rate a meal based on the cost (Norwegian Kr), protein amount (grams) and calorie amount (kcal). The rating model was trained with a polynomial regression model in scikit-learn, based on a manually crafted data set of 100 meals.
+Machine learning web app to rate a meal from 0 to 10 based on the cost (Norwegian Kr), protein amount (grams) and calorie amount (kcal). The rating model was trained with a polynomial regression model in scikit-learn, based on a manually crafted data set of 100 meals.
 
 The rating will work best for people eating approximately 3000 calories daily, divided into 3-4 meals.
 
