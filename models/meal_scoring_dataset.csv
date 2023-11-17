@@ -1,4 +1,4 @@
-Meal ID,Cost (NOK),Protein (g),Calories (kcal),Your Score
+meal_id,cost,protein,calories,score
 1,20,40,300,8.0
 2,45,30,600,5.5
 3,90,50,900,5.5
