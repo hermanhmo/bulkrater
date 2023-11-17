@@ -21,22 +21,22 @@ Feel free to create a new model with your own data set, or add to the current da
 
 ## Run the prebuilt web app on Google Cloud:
 
-[Link to the deployed web app on Google Cloud](https://bulkrater-7jh2arsyhq-uc.a.run.app)
+[Link to the deployed web app on Google Cloud](https://mealrater-7jh2arsyhq-uc.a.run.app)
 
 (Loading can take up to 10 seconds if no one else is using the app, as Google shuts down the container instance when there is no traffic)
 
 ## Run locally:
 Clone the repository to your local machine:
 ```bash
-git clone https://github.com/hermanhmo/bulkrater.git
+git clone https://github.com/hermanhmo/mealrater.git
 ```
-**cd** to the **/bulkrater** directory and build the docker image:
+**cd** to the **/mealrater** directory and build the docker image:
 ```bash
-docker build -t bulkrater .
+docker build -t mealrater .
 ```
 Run the docker image:
 ```bash
-docker run -p 8080:8080 bulkrater
+docker run -p 8080:8080 mealrater
 ```
 Now you can access the web app in your browser:
 ```
