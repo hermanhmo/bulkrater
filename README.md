@@ -4,3 +4,5 @@ Machine learning web app to rate a meal based on the cost (Norwegian Kr), protei
 The rating will work best for people eating approximately 3000 calories daily devided by 3-4 meals.
 
 [Link to the deployed web app on Google Cloud](https://bulkrater-7jh2arsyhq-uc.a.run.app)
+
+(Loading can take up to 10 seconds if no one else is using the app, as Google shuts down the container instance when there is no traffic)
