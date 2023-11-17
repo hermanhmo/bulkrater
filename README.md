@@ -1,11 +1,23 @@
-# Bulking Meal Rater
-Machine learning web app to rate a meal from 0 to 10 based on the cost (Norwegian Kr), protein amount (grams) and calorie amount (kcal). The rating model was trained with a polynomial regression model in scikit-learn, based on a manually crafted data set of 100 meals.
+# Meal Rater
+Machine learning web app to rate a meal from 0 to 10 based on the cost (Norwegian Kr), protein amount (grams) and calorie amount (kcal). The rating model was trained with 2 different polynomial regression models in scikit-learn, based on 2 manually crafted data set of 100 meals.
 
-The rating will work best for people eating approximately 3000 calories daily, divided into 3-4 meals.
+The **bulk** rating will work best for people eating approximately 3000 calories daily, divided into 3-4 meals. The **cut** rating will work for anyone wanting a high protein diet with as little calories as possible, without overspending on food.
 
-Feel free to create a new model with your own data set, or add to the current data set (located at models/meal_scoring_dataset.csv) and retrain the model using the **models/polynomial_regression_trainer.py**
+Feel free to create a new model with your own data set, or add to the current data sets (located in the **models** folder) and retrain the model using the **models/polynomial_regression_trainer.py**
 
-The current evaluation metrics for the machine learning model are a Mean Squared Error (MSE) of 0.7798 and an R² Score of 0.8786. This indicates a strong predictive capability, where approximately 88% of the variance in meal ratings is explained by the model, and the average squared difference between the predicted and actual ratings is relatively low.
+### Current evaluation metrics for the machine learning models:
+
+**Bulking** model(2nd degree polynomial regression):
+
+* Mean Squared Error: 0.7798
+
+* R² Score: 0.8786. 
+
+**Cutting** model (3rd degree polynomial regression): 
+
+* Mean Squared Error: 0.6793
+
+* R² Score: 0.9291.
 
 ## Run the prebuilt web app on Google Cloud:
 
