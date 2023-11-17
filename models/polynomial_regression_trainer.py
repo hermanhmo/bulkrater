@@ -6,7 +6,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 import joblib
 
 # Load the dataset
-df = pd.read_csv('./meal_scoring_dataset.csv')  # Update the path to your dataset file
+df = pd.read_csv('./meal_scoring_dataset.csv')  # Path to your dataset file
 
 # Define the features and the target
 X = df[['cost', 'protein', 'calories']]
