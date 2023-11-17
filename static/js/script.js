@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
             headerTitle.textContent = 'Cutting Meal Rater'; // Text when toggled left
         }
         // Reset the score to placeholder value when toggle is switched
-        scoreElement.innerText = 'Score: 0';
+        scoreElement.innerText = 'Score: 0.00';
         scoreElement.classList.add('score-placeholder');
     });
 });
