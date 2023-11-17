@@ -5,6 +5,8 @@ The rating will work best for people eating approximately 3000 calories daily, d
 
 Feel free to create a new model with your own data set, or add to the current data set (located at models/meal_scoring_dataset.csv) and retrain the model using the **models/polynomial_regression_trainer.py**
 
+The current evaluation metrics for the machine learning model are a Mean Squared Error (MSE) of 0.7798 and an R² Score of 0.8786. 
+
 ## Run the prebuilt web app on Google Cloud:
 
 [Link to the deployed web app on Google Cloud](https://bulkrater-7jh2arsyhq-uc.a.run.app)
