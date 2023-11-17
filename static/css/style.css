@@ -1,17 +1,17 @@
 html {
-    font-size: 20px; /* Increase this value to scale up */
+    font-size: 20px;
 }
 
 h1 {
-    font-size: 2.2rem; /* Adjust the size as needed */
-    white-space: nowrap; /* Prevents the title from wrapping */
-    overflow: hidden; /* Ensures any overflow is hidden */
-    text-overflow: ellipsis; /* Adds an ellipsis if the title is too long */
+    font-size: 2.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
 body {
-    background-color: #fcfaeb; /* Offwhite/Eggwhite */
+    background-color: #fcfaeb;
     font-family: Arial, sans-serif;
 }
 
@@ -22,14 +22,14 @@ body {
 }
 
 #score {
-    font-size: 1.5rem; /* Adjust the size as needed */
+    font-size: 1.5rem;
     margin: 20px 0;
     padding: 10px;
     background-color: white;
 }
 
 button {
-    font-size: 1rem; /* Adjust the size as needed */
+    font-size: 1rem;
     background-color: black;
     color: white;
     padding: 10px 15px;
@@ -51,7 +51,7 @@ button:disabled {
 }
 
 label {
-    width: 20rem; /* Keep the label width consistent */
+    width: 20rem;
     text-align: right;
     margin-right: 0.5rem;
 }
@@ -60,12 +60,10 @@ input[type="number"] {
     font-size: 1rem;
     height: 1.5rem;
     padding: 0.3rem;
-    width: auto; /* Adjust based on your layout needs */
-    /* other styles */
+    width: auto;
 }
 
 
 .score-placeholder {
     color: grey;
-    /* Additional styles for the placeholder */
 }
