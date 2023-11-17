@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 import joblib
+import os
 
 app = Flask(__name__)
 
@@ -64,4 +65,7 @@ def not_found_error(error):
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    # Get the port number from the environment variable
+    port = int(os.environ.get('PORT', 8000))  # Use 8080 as a default if $PORT is not set
+    # Run the app
+    app.run(host='0.0.0.0', port=port)
