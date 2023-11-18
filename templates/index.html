@@ -7,10 +7,9 @@
 </head>
 <body>
     <div id="main-container"> <!-- New Main Container -->
-
         <div id="container1">
             <h1 id="headerTitle">Bulking Meal Rater</h1>
-            <div id="score" class="score-placeholder">Score: 0.00</div>
+            <div id="score" class="score-placeholder">Score: -</div>
             <div class="toggle-container">
                 <span class="label-left">Cut</span>
                 <label class="switch">
@@ -36,13 +35,17 @@
                 <label for="calories">Kalorier (kcal):</label>
                 <input type="number" inputmode="numeric" id="calories" name="calories">
             </div>
-
         </div>
 
         <div id="container3">
             <button id="submit" disabled>Rate Måltid</button>
         </div>
-
+        <!-- GitHub Badge -->
+        <div id="github-badge">
+            <a href="https://github.com/hermanhmo/mealrater" target="_blank">
+                <img src="https://img.shields.io/badge/-hermanhmo%2Fmealrater-blue?style=flat&logo=github" alt="GitHub Repository" />
+            </a>
+        </div>
     </div> <!-- End of Main Container -->
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
